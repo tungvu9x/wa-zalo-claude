@@ -14,6 +14,8 @@ Windows agent (Node)                         Cloud (Docker)
 
 ## Cài trên một máy Windows (Cloud + Agent + Claude Desktop)
 
+Hướng dẫn chi tiết từng bước, xử lý sự cố và sao lưu: **[INSTALL.md](INSTALL.md)**.
+
 Cách này không cần Docker. Mở **PowerShell** (không cần chạy bằng Admin) và chạy lần lượt:
 
 ```powershell
