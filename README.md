@@ -21,8 +21,8 @@ Cách này không cần Docker. Mở **PowerShell** (không cần chạy bằng 
 ```powershell
 winget install -e --id Git.Git --accept-source-agreements --accept-package-agreements
 # Đóng PowerShell, mở cửa sổ mới, rồi chạy tiếp:
-git clone https://github.com/<tai-khoan>/wa-zalo-daily.git $HOME\wa-zalo-daily
-cd $HOME\wa-zalo-daily
+git clone https://github.com/tungvu9x/wa-zalo-claude.git $HOME\wa-zalo-claude
+cd $HOME\wa-zalo-claude
 powershell -ExecutionPolicy Bypass -File .\install-windows.ps1
 ```
 

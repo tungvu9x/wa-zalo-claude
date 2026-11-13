@@ -35,11 +35,11 @@ Cài xong, **đóng PowerShell và mở cửa sổ mới**, để Windows nhận
 ## 3. Tải mã nguồn
 
 ```powershell
-git clone https://github.com/tungvu9x/Duy-dep-trai.git $HOME\wa-zalo-daily
-cd $HOME\wa-zalo-daily
+git clone https://github.com/tungvu9x/wa-zalo-claude.git $HOME\wa-zalo-claude
+cd $HOME\wa-zalo-claude
 ```
 
-Thư mục cài đặt là `C:\Users\<tên user>\wa-zalo-daily`.
+Thư mục cài đặt là `C:\Users\<tên user>\wa-zalo-claude`.
 
 ## 4. Chạy bộ cài
 
@@ -109,7 +109,7 @@ Một số câu hỏi mẫu:
 **Cập nhật phiên bản mới:**
 
 ```powershell
-cd $HOME\wa-zalo-daily
+cd $HOME\wa-zalo-claude
 git pull
 powershell -ExecutionPolicy Bypass -File .\install-windows.ps1
 ```
@@ -160,6 +160,6 @@ Muốn sao lưu đầy đủ thì chép thêm thư mục `data\files\` và hai f
 2. Trên điện thoại:
    - WhatsApp: vào **Thiết bị đã liên kết**, gỡ thiết bị của máy này.
    - Zalo: vào **Cài đặt › Tài khoản và bảo mật › Thiết bị đăng nhập**, đăng xuất thiết bị của máy này.
-3. Xoá thư mục `$HOME\wa-zalo-daily` và hai shortcut trên Desktop.
+3. Xoá thư mục `$HOME\wa-zalo-claude` và hai shortcut trên Desktop.
 4. Mở `%APPDATA%\Claude\claude_desktop_config.json` và xoá mục `wa-zalo-daily` trong `mcpServers`.
 5. Nếu không dùng PostgreSQL cho việc khác, gỡ bằng lệnh `winget uninstall PostgreSQL.PostgreSQL.16`.
