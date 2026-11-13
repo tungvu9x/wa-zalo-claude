@@ -1,0 +1,9 @@
+# Secret va du lieu may (KHONG dua len GitHub)
+.env
+data/
+logs/
+tools/
+cloud/.venv/
+node_modules/
+__pycache__/
+*.bak-*

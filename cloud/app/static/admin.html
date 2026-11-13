@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WA-Zalo Daily · Quản trị</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="/admin/static/admin.css">
+</head>
+<body>
+<header class="top">
+  <div class="in">
+    <div class="brand">
+      <span class="logo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+      WA-Zalo Daily <span class="dev" id="devname">Quản trị</span>
+    </div>
+    <nav class="tabs" aria-label="Điều hướng">
+      <a href="#/overview" data-tab="overview">Tổng quan</a>
+      <a href="#/files" data-tab="files">File đính kèm</a>
+      <a href="#/report" data-tab="report">Báo cáo</a>
+      <a href="#/settings" data-tab="settings">Cài đặt</a>
+    </nav>
+    <form method="post" action="/admin/logout"><button type="submit">Đăng xuất</button></form>
+  </div>
+</header>
+<main id="app" aria-live="polite"><p class="muted">Đang tải…</p></main>
+<script src="/admin/static/admin.js"></script>
+</body>
+</html>

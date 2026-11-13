@@ -1,0 +1,41 @@
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: wadaily
+      POSTGRES_DB: wadaily
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?dat POSTGRES_PASSWORD trong .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U wadaily -d wadaily"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: ./cloud
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://wadaily:${POSTGRES_PASSWORD}@db:5432/wadaily
+      MASTER_KEY: ${MASTER_KEY:?dat MASTER_KEY trong .env}
+      ADMIN_TOKEN: ${ADMIN_TOKEN:?dat ADMIN_TOKEN trong .env}
+      STORAGE_DIR: /data/files
+      MAX_FILE_MB: ${MAX_FILE_MB:-100}
+      MCP_TOKEN: ${MCP_TOKEN:-}
+      MCP_TENANT_ID: ${MCP_TENANT_ID:-}
+      ADMIN_UI_PASSWORD: ${ADMIN_UI_PASSWORD:-}
+    volumes:
+      - filedata:/data/files
+    # Mac dinh chi mo localhost. Claude Desktop o may khac trong LAN: dat API_BIND=0.0.0.0.
+    # Ra Internet (claude.ai): dung Cloudflare Tunnel/reverse proxy HTTPS, khong mo cong truc tiep.
+    ports:
+      - "${API_BIND:-127.0.0.1}:8080:8080"
+
+volumes:
+  pgdata:
+  filedata:

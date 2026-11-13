@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "wa-zalo-daily": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@0.16.6",
+        "http://127.0.0.1:8080/mcp",
+        "--header",
+        "Authorization:${AUTH_HEADER}"
+      ],
+      "env": {
+        "AUTH_HEADER": "Bearer <MCP_TOKEN>"
+      }
+    }
+  }
+}
