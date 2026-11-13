@@ -6,7 +6,7 @@ Cài cả hệ thống lên **một máy Windows**:
 - **Cloud**: lưu tin, đọc file PDF/Excel, chạy trang quản trị.
 - **Claude Desktop**: kết nối với Cloud qua MCP để tổng hợp tin nhắn.
 
-Toàn bộ thao tác làm qua TeamViewer được. Cài lần đầu mất khoảng 20–30 phút; phần lớn thời gian là chờ tải phần mềm.
+Cài trên Mac: xem [INSTALL-mac.md](INSTALL-mac.md). Toàn bộ thao tác làm qua TeamViewer được. Cài lần đầu mất khoảng 20–30 phút; phần lớn thời gian là chờ tải phần mềm.
 
 ## 0. Chuẩn bị
 
